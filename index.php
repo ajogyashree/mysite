@@ -9,6 +9,31 @@ header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Xss-Protection: 1;mode=block");
 
+require_once('keys.php');
+
+// Create connection
+$conn = new mysqli($db["servername"], $db["username"], $db["password"], $db["dbname"]);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+
+$ip = mysqli_real_escape_string($conn, $_SERVER['REMOTE_ADDR']);
+$data_array = getallheaders();
+$data_array['REQUEST_URI'] = $_SERVER["REQUEST_URI"];
+$data_array["REMOTE_PORT"] = $_SERVER["REMOTE_PORT"];
+
+$data = mysqli_real_escape_string($conn, json_encode($data_array));
+$sql = "INSERT INTO mysite ( `ip` , `data` ) VALUES ( '$ip', '$data' )";
+
+if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -77,11 +102,12 @@ header("X-Xss-Protection: 1;mode=block");
                             <p class="title">PHP Core / Frameworks</p>
                         </li>
                         <li class="social">
-                            <a target="_blank" href="https://www.facebook.com/J.Sreepati.Rao" title="Might need login. Don't know how this works"><i class="fab fa-facebook-square"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/J.Sreepati.Rao" title="Need Login!! Meh!!!"><i class="fab fa-facebook-square"></i></a>
                             <a target="_blank" href="https://github.com/ajogyashree"><i class="fab fa-github"></i></a>
                             <a target="_blank" href="https://stackoverflow.com/users/3007408/sp0t?tab=profile"><i class="fab fa-stack-overflow"></i></a>
                             <a target="_blank" href="https://twitter.com/ajogya_shree"><i class="fab fa-twitter-square"></i></a>
                             <a target="_blank" href="https://www.amazon.in/hz/wishlist/ls/GPCUUSXK0EGX" title="We have a derth of Good people"><i class="fab fa-amazon"></i></a>
+                            <a target="_blank" href="https://www.amazon.in/hz/wishlist/ls/GPCUUSXK0EGX" title="We have a derth of Good people"><i class="fab fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -151,7 +177,7 @@ header("X-Xss-Protection: 1;mode=block");
                                             Multivendor food based ecommerce platform catering to users across Delhi NCR
                                         </li>
                                         <li>
-                                            Multiple <a target="_blank" href="https://www.synapseindia.com/portfolio/" title="Majorly on CakePHP,Opencart and Ecommerce"> other</a> projects based of different platforms
+                                            Multiple <a target="_blank" href="https://www.synapseindia.com/portfolio/" title="Mostly on CakePHP,Opencart and Ecommerce"> other</a> projects based of different platforms
                                         </li>
                                     </ul>
                                 </li>
