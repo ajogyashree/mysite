@@ -86,7 +86,7 @@ require_once('db/keys.php');
                             <a target="_blank" href="https://stackoverflow.com/users/3007408/sp0t?tab=profile"><i class="fab fa-stack-overflow"></i></a>
                             <a target="_blank" href="https://twitter.com/ajogya_shree"><i class="fab fa-twitter-square"></i></a>
                             <a target="_blank" href="https://www.amazon.in/hz/wishlist/ls/GPCUUSXK0EGX" title="We have a derth of Good people"><i class="fab fa-amazon"></i></a>
-                            <a target="_blank" href="https://www.amazon.in/hz/wishlist/ls/GPCUUSXK0EGX" title="We have a derth of Good people"><i class="fab fa-linkedin"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/j-sreepati-rao" title="We have a derth of Good people"><i class="fab fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
