@@ -1,2 +1,4 @@
 node_modules/
-keys.php
+db/
+blog/
+cgi-bin/

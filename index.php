@@ -9,7 +9,7 @@ header("X-Content-Type-Options: nosniff");
 header("X-Frame-Options: SAMEORIGIN");
 header("X-Xss-Protection: 1;mode=block");
 
-require_once('keys.php');
+require_once('db/keys.php');
 
 // Create connection
 $conn = new mysqli($db["servername"], $db["username"], $db["password"], $db["dbname"]);
@@ -24,12 +24,10 @@ $data_array['REQUEST_URI'] = $_SERVER["REQUEST_URI"];
 $data_array["REMOTE_PORT"] = $_SERVER["REMOTE_PORT"];
 
 $data = mysqli_real_escape_string($conn, json_encode($data_array));
-$sql = "INSERT INTO mysite ( `ip` , `data` ) VALUES ( '$ip', '$data' )";
+$sql = "INSERT INTO ajogya_profile ( `ip` , `data` ) VALUES ( '$ip', '$data' )";
 
-if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+if ($conn->query($sql) === TRUE) { } else {
+    die($conn->error);
 }
 
 $conn->close();
