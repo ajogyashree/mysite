@@ -1,5 +1,7 @@
 <?php 
 
+header_remove("x-powered-by");
+
 header("Content-Type: text/html; charset=UTF-8");
 header("Content-Security-Policy: default-src 'self'; script-src 'self' cdnjs.cloudflare.com code.jquery.com stackpath.bootstrapcdn.com; img-src 'self'; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com stackpath.bootstrapcdn.com use.fontawesome.com; font-src 'self' use.fontawesome.com; form-action 'self'");
 header("Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'");
@@ -10,27 +12,6 @@ header("X-Frame-Options: SAMEORIGIN");
 header("X-Xss-Protection: 1;mode=block");
 
 require_once('db/keys.php');
-
-// Create connection
-$conn = new mysqli($db["servername"], $db["username"], $db["password"], $db["dbname"]);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-
-$ip = mysqli_real_escape_string($conn, $_SERVER['REMOTE_ADDR']);
-$data_array = getallheaders();
-$data_array['REQUEST_URI'] = $_SERVER["REQUEST_URI"];
-$data_array["REMOTE_PORT"] = $_SERVER["REMOTE_PORT"];
-
-$data = mysqli_real_escape_string($conn, json_encode($data_array));
-$sql = "INSERT INTO ajogya_profile ( `ip` , `data` ) VALUES ( '$ip', '$data' )";
-
-if ($conn->query($sql) === TRUE) { } else {
-    die($conn->error);
-}
-
-$conn->close();
 
 ?>
 <!doctype html>
