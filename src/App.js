@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import './reset.css';
 import './App.css';
 
+import { Sidebar } from './component/sidebar.component';
+import { Mainbody } from './component/mainbody.component';
+
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            'isDark': false,
+            'issideOpen': false,
+        }
+    }
+
+    darkMode = (value) => {
+        this.setState({ 'isDark': value });
+    }
+
+    sideMode = (value) => {
+        this.setState({ 'issideOpen': value });
+    }
+
+
+    render() {
+        return (
+            <main className={`app ${this.state.isDark ? `dark-mode` : ``} `}>
+                <Sidebar toggleDark={this.darkMode} toggleSide={this.sideMode} />
+                <Mainbody />
+            </main>
+        );
+    }
 }
 
 export default App;
