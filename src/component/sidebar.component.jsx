@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class Sidebar extends Component {
     constructor(props) {
@@ -38,16 +39,16 @@ export class Sidebar extends Component {
             <div className={`sidebar ${this.state.sideOpen ? `show-sidebar`:``}`}>
                 <ul>
                     <li>
-                        <a href="http://">Me</a>
+                        <Link to='/' onClick={this.toggleSidebar}>Me</Link>
                     </li>
                     <li>
-                        <a href="http://">Story</a>
+                        <Link to='/story' onClick={this.toggleSidebar}>Story</Link>
                     </li>
                     <li>
-                        <a href="http://">Photos</a>
+                        <Link to='/photos' onClick={this.toggleSidebar}>Photos</Link>
                     </li>
                     <li>
-                        <a href="http://">About</a>
+                        <Link to='/about' onClick={this.toggleSidebar}>About</Link>
                     </li>
                     <li>
                         <button onClick={this.toggleDarkmode}>{ (this.state.darkMode) ? 'Light Mode' : 'Dark Mode' }</button>

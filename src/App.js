@@ -3,7 +3,6 @@ import './reset.css';
 import './App.css';
 
 import { Sidebar } from './component/sidebar.component';
-import { Mainbody } from './component/mainbody.component';
 
 class App extends Component {
 
@@ -29,7 +28,7 @@ class App extends Component {
         return (
             <main className={`app ${this.state.isDark ? `dark-mode` : ``} `}>
                 <Sidebar toggleDark={this.darkMode} toggleSide={this.sideMode} />
-                <Mainbody />
+                {this.props.content} 
             </main>
         );
     }
