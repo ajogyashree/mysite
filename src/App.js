@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import './reset.css';
+
 import './App.css';
-
 import { Sidebar } from './component/sidebar.component';
-
+import {Router} from './router'
 class App extends Component {
 
     constructor(props) {
@@ -28,7 +27,7 @@ class App extends Component {
         return (
             <main className={`app ${this.state.isDark ? `dark-mode` : ``} `}>
                 <Sidebar toggleDark={this.darkMode} toggleSide={this.sideMode} />
-                {this.props.content} 
+                <Router/>
             </main>
         );
     }
