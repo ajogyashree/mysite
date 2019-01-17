@@ -1,14 +1,15 @@
 .app {
     height: 100vh;
     width: 100%;
-    background-color: #ffffff;
+    background: linear-gradient(#b2dbbf 50%, #f3ffbd 100%);
     color: #333333;
-    transition: all 1s ease;
+    transition: all 1s ease-in-out;
 }
 
 .app.dark-mode {
-    background-color: #333333;
+    background: linear-gradient(#0b0e0c 0%, #0e5d75 100%);
     color: #f6f6f6;
+    transition: all 1s ease-in-out;
 }
 
 .app.dark-mode .sidebar a {
@@ -34,7 +35,7 @@
 .sidebar ul {
     height: 100vh;
     position: relative;
-    background: #eeeeee;
+    background: #a5a5a5;
     width: 1%;
     display: flex;
     flex-direction: column;
@@ -62,7 +63,7 @@
     top: 10px;
     left: 100%;
     width: 20px;
-    background: #eeeeee;
+    background: #a5a5a5;
     transition: all 1s ease;
 }
 
@@ -96,4 +97,8 @@
 
 .content{
     text-align: center;
+}
+
+.hello { 
+    font-size: 48px;
 }

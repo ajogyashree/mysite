@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Gesture from "./gesture.component";
 
 export class Sidebar extends Component {
     constructor(props) {
@@ -52,6 +53,7 @@ export class Sidebar extends Component {
                     </li>
                     <li>
                         <button onClick={this.toggleDarkmode}>{ (this.state.darkMode) ? 'Light Mode' : 'Dark Mode' }</button>
+                        <Gesture modeToggler={this.toggleDarkmode} />
                     </li>
                     <li className="toggle">
                         <button className="side-toggle" onClick={this.toggleSidebar}>
