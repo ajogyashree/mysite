@@ -1,0 +1,26 @@
+.content{
+    text-align: center;
+}
+
+.me {
+    height: 350px;
+    border-radius: 50%;
+}
+
+.hello { 
+    font-size: 48px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 17px;
+}
+
+@media screen and (max-width: 640px){
+    .me{
+        height: 300px;
+    }
+}

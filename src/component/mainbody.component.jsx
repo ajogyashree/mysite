@@ -7,12 +7,14 @@ export class Mainbody extends Component {
         return (
             <div className="body">
                 <div className="content">
+                    <img className="me" src="../../assets/me.jpg" alt="Me"/>
                     <Spring
                         from={{ opacity: 0 }}
                         to={{ opacity: 1 }}>
-                        {props => <div className="hello" style={props}>hello</div>}
+                        {props => <div className="hello" style={props}>@ajogyashree</div>}
                     </Spring>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique id accusamus consequatur aperiam voluptate expedita laboriosam in ut quidem, commodi, iusto, numquam eos recusandae nemo reiciendis distinctio dolore voluptas nisi.</h3>
+                    <h3>Portfolio site of J Sreepati Rao</h3>
+                    <p>Full Stack Web Developer / Freelancer</p>
                 </div>
             </div>
         );

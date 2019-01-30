@@ -12,81 +12,6 @@
     transition: all 1s ease-in-out;
 }
 
-.app.dark-mode .sidebar a {
-    color: #f6f6f6;
-}
-
-.app.dark-mode .sidebar ul {
-    background-color: #656363;
-}
-
-.app.dark-mode .side-toggle {
-    background-color: #656363;
-}
-
-.sidebar {
-    position: fixed;
-    height: 100vh;
-    width: 30%;
-    max-width: 200px;
-    z-index: 2;
-}
-
-.sidebar ul {
-    height: 100vh;
-    position: relative;
-    background: #a5a5a5;
-    width: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: all 1s ease;
-}
-
-.sidebar ul li:not(.toggle) { 
-    display: none;
-}
-
-.sidebar.show-sidebar ul {
-    width: 100%;
-}
-
-.sidebar.show-sidebar ul li:not(.toggle) { 
-    display: block;
-}
-
-.side-toggle {
-    padding: 0;
-    border: none;
-    position: absolute;
-    top: 10px;
-    left: 100%;
-    width: 20px;
-    background: #a5a5a5;
-    transition: all 1s ease;
-}
-
-.side-toggle img {
-    height: 20px;
-    width: 20px;
-}
-
-.sidebar a {
-    width: 100%;
-    color: #333333;
-    text-decoration: none;
-    font-size: 14px;
-    transition: all 1s ease;
-}
-
-.sidebar button:not(.side-toggle) {
-    border: none;
-    background-color: #f6f6f6;
-    color: #333;
-    padding: 5px 10px;
-}
-
 .body {
     display: flex;
     justify-content: center;
@@ -95,10 +20,6 @@
     width: 100%;
 }
 
-.content{
-    text-align: center;
-}
 
-.hello { 
-    font-size: 48px;
-}
+@import "./sidebar.css";
+@import "./mainbody.css";

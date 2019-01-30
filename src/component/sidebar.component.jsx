@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Gesture from "./gesture.component";
 
 export class Sidebar extends Component {
     constructor(props) {
@@ -51,20 +50,19 @@ export class Sidebar extends Component {
                     <li>
                         <Link to='/about' onClick={this.toggleSidebar}>About</Link>
                     </li>
-                    <li>
-                        <button onClick={this.toggleDarkmode}>{ (this.state.darkMode) ? 'Light Mode' : 'Dark Mode' }</button>
-                        <Gesture modeToggler={this.toggleDarkmode} />
+                    <li className="toggle-darkmode">
+                        <img onClick={this.toggleDarkmode} className={(this.state.darkMode) ? 'light' : 'dark'} src="../assets/day-and-night.jpg" alt="Toggle Dark Mode"/>
                     </li>
-                    <li className="toggle">
+                    <li className="toggle-sidebar">
                         <button className="side-toggle" onClick={this.toggleSidebar}>
                             {(() => {
                                 if (this.state.sideOpen) {
                                     return (
-                                        <img src="../assets/close.svg" alt="Close"/>
+                                        <img src="../assets/close.png" alt="Close"/>
                                         )
                                 } else {
                                     return (
-                                        <img src="../assets/open.svg" alt="Open"/>
+                                        <img src="../assets/open.png" alt="Open"/>
                                     )
                                 }
                             })()}
