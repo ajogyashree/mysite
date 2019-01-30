@@ -5,6 +5,7 @@ import { Mainbody } from './component/mainbody.component';
 import { About } from './component/about.component';
 import { Story } from './component/story.component';
 import { Photos } from './component/photos.component';
+import { Timeline } from './component/timeline.component';
 
 export const Routes = [
 	{
@@ -22,6 +23,10 @@ export const Routes = [
 	{
 		path:'/story',
 		component: Story
+	},	
+	{
+		path:'/timeline',
+        component: Timeline
 	}	
 ]
 export const Router = () =>(

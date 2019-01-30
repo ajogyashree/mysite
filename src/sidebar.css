@@ -30,12 +30,14 @@
     display: block;
 }
 
-.side-toggle {
-    padding: 0;
-    border: none;
+.sidebar ul li.toggle-sidebar {
     position: absolute;
     top: 10px;
-    left: 99%;
+    left: 95%;
+}
+
+.side-toggle {
+    border: none;
     width: 50px;
     height: 50px;
     border-radius: 0px 12px 12px 0px;
@@ -64,8 +66,16 @@
 .sidebar .toggle-darkmode img {
     border-radius: 50%;
     height: 50px;
+    transition: all 1s ease;
 }
 
+.sidebar .toggle-darkmode img.dark { 
+    transform: rotate(180deg)
+}
+
+.sidebar .toggle-darkmode img.light { 
+    transform: rotate(0deg)
+}
 
 .app.dark-mode .sidebar a {
     color: #f6f6f6;

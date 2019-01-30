@@ -45,13 +45,16 @@ export class Sidebar extends Component {
                         <Link to='/story' onClick={this.toggleSidebar}>Story</Link>
                     </li>
                     <li>
+                        <Link to='/timeline' onClick={this.toggleSidebar}>Timeline</Link>
+                    </li>
+                    <li>
                         <Link to='/photos' onClick={this.toggleSidebar}>Photos</Link>
                     </li>
                     <li>
                         <Link to='/about' onClick={this.toggleSidebar}>About</Link>
                     </li>
                     <li className="toggle-darkmode">
-                        <img onClick={this.toggleDarkmode} className={(this.state.darkMode) ? 'light' : 'dark'} src="../assets/day-and-night.jpg" alt="Toggle Dark Mode"/>
+                        <img onClick={this.toggleDarkmode} className={(this.state.darkMode) ? 'dark' : 'light'} src="../assets/day-and-night.jpg" alt="Toggle Dark Mode"/>
                     </li>
                     <li className="toggle-sidebar">
                         <button className="side-toggle" onClick={this.toggleSidebar}>
