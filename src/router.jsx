@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom';
 
-import { Mainbody } from './component/mainbody.component';
+import { Home } from './component/home.component';
 import { About } from './component/about.component';
 import { Story } from './component/story.component';
 import { Photos } from './component/photos.component';
@@ -10,7 +10,7 @@ import { Timeline } from './component/timeline.component';
 export const Routes = [
 	{
 		path:'/',
-		component: Mainbody
+		component: Home
 	},
 	{
 		path:'/about',

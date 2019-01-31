@@ -56,22 +56,22 @@ export class Sidebar extends Component {
                     <li className="toggle-darkmode">
                         <img onClick={this.toggleDarkmode} className={(this.state.darkMode) ? 'dark' : 'light'} src="../assets/day-and-night.jpg" alt="Toggle Dark Mode"/>
                     </li>
-                    <li className="toggle-sidebar">
-                        <button className="side-toggle" onClick={this.toggleSidebar}>
-                            {(() => {
-                                if (this.state.sideOpen) {
-                                    return (
-                                        <img src="../assets/close.png" alt="Close"/>
-                                        )
-                                } else {
-                                    return (
-                                        <img src="../assets/open.png" alt="Open"/>
-                                    )
-                                }
-                            })()}
-                        </button>
-                    </li>
                 </ul>
+                <div className="toggle-sidebar">
+                    <button className="side-toggle" onClick={this.toggleSidebar}>
+                        {(() => {
+                            if (this.state.sideOpen) {
+                                return (
+                                    <img src="../assets/close.png" alt="Close"/>
+                                    )
+                            } else {
+                                return (
+                                    <img src="../assets/open.png" alt="Open"/>
+                                )
+                            }
+                        })()}
+                    </button>
+                </div>
             </div>
         );
     }

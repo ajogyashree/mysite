@@ -1,36 +1,17 @@
 .sidebar {
     position: fixed;
     height: 100vh;
-    width: 30%;
+    width: 0%;
     max-width: 200px;
     z-index: 2;
-}
-
-.sidebar ul {
-    height: 100vh;
-    position: relative;
-    background: #a5a5a5;
-    width: 1%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
     transition: all 1s ease;
 }
 
-.sidebar ul li:not(.toggle-sidebar) { 
-    display: none;
+.sidebar.show-sidebar {
+    width: 30%;
 }
 
-.sidebar.show-sidebar ul {
-    width: 100%;
-}
-
-.sidebar.show-sidebar ul li:not(.toggle-sidebar) { 
-    display: block;
-}
-
-.sidebar ul li.toggle-sidebar {
+.sidebar .toggle-sidebar {
     position: absolute;
     top: 10px;
     left: 95%;
@@ -42,7 +23,6 @@
     height: 50px;
     border-radius: 0px 12px 12px 0px;
     background: #a5a5a5;
-    transition: all 1s ease;
 }
 
 .side-toggle:focus, .side-toggle:hover, .side-toggle:active {
@@ -55,30 +35,15 @@
     width: 30px;
 }
 
-.sidebar a {
-    width: 100%;
-    color: #333333;
-    text-decoration: none;
-    font-size: 14px;
+.sidebar ul {
+    height: 100vh;
+    background: #a5a5a5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
     transition: all 1s ease;
-}
-
-.sidebar .toggle-darkmode img {
-    border-radius: 50%;
-    height: 50px;
-    transition: all 1s ease;
-}
-
-.sidebar .toggle-darkmode img.dark { 
-    transform: rotate(180deg)
-}
-
-.sidebar .toggle-darkmode img.light { 
-    transform: rotate(0deg)
-}
-
-.app.dark-mode .sidebar a {
-    color: #f6f6f6;
 }
 
 .app.dark-mode .sidebar ul {
@@ -87,4 +52,34 @@
 
 .app.dark-mode .side-toggle {
     background-color: #656363;
+}
+
+.app.dark-mode .sidebar ul li a {
+    color: #f6f6f6;
+}
+
+.sidebar ul li {
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+.sidebar ul li.toggle-darkmode img {
+    border-radius: 50%;
+    height: 50px;
+    transition: all 1s ease;
+}
+
+.sidebar ul li.toggle-darkmode img.dark { 
+    transform: rotate(180deg)
+}
+
+.sidebar ul li.toggle-darkmode img.light { 
+    transform: rotate(0deg)
 }
