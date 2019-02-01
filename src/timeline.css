@@ -1,3 +1,64 @@
-.timeline {
+.body.timeline {
     align-items: unset;
+}
+
+.timeline h3 {
+    margin: 15px;
+    padding: 10px;
+} 
+
+.timeline .content {
+    width: 100%;
+}
+
+.timeline-list {
+    position: relative;
+    height: 88vh;
+    overflow: scroll;
+}
+
+.timeline-block {
+    max-width: 250px;
+    position: absolute;
+    background: white;
+    z-index: 2;
+    padding: 10px;
+}
+
+.timeline-block.odd {
+    left: 0;
+}
+
+.timeline-block.even {
+    right: 0;
+}
+
+.timeline-block.first {
+    top: 30px;
+}
+
+.timeline-block.second {
+    top: 50%;
+}
+.timeline-block.third {
+    top: 100%;
+}
+.timeline-block.fourth {
+    top: 150%;
+}
+
+.line {
+    position: absolute;
+    height: 170%;
+    width: 5px;
+    background: #de593a;
+    z-index: 1;
+}
+.line-covered {
+    position: fixed;
+    height: 55%;
+    width: 5px;
+    top: 77px;
+    right: 182px;
+    background: #453ade;
 }
