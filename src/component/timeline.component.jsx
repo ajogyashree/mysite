@@ -54,7 +54,7 @@ export class Timeline extends Component {
                         </div>
                         <div className="timeline-block">
                             <p className="year">2008 <span className="month">May</span></p>
-                            <p className="desc">Completed +2 under Council of Higher Secondary Education, Berhampur securing 67%.</p>
+                            <p className="desc">Completed +2 from <a href="http://www.roland.ac.in/" target="_blank" rel="noopener noreferrer">Roland Junior College</a>, Berhampur under Council of Higher Secondary Education, Berhampur securing 67%.</p>
                         </div>
                         <div className="timeline-block">
                             <p className="year">2006 <span className="month">May</span></p>
