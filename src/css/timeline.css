@@ -1,0 +1,72 @@
+.body.timeline {
+    align-items: unset;
+}
+
+.timeline h3 {
+    margin: 15px;
+    padding: 10px;
+} 
+
+.timeline .content {
+    width: 100%;
+}
+
+.timeline-list {
+    position: relative;
+    height: 88vh;
+    overflow: scroll;
+}
+
+.timeline-block {
+    position: relative;
+    margin: 0 20px;
+    border-left: 1px solid;
+    padding: 0 20px 20px;
+    height: 170px;
+}
+
+p.year {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+p.desc a {
+    text-decoration: none;
+}
+
+.app .timeline-block::before {
+    content: "";
+    position: absolute;
+    background-color: #333333;
+    height: 20px;
+    width: 20px;
+    top: 0;
+    left: -10px;
+    border-radius: 50%;
+}
+
+.app .timeline-block:last-child::after {
+    content: "";
+    position: absolute;
+    background-color: #333333;
+    height: 20px;
+    width: 20px;
+    bottom: 0;
+    left: -10px;
+    border-radius: 50%;
+}
+.app.dark-mode  .timeline-block::before {
+    background-color: #f6f6f6;
+}
+
+.app.dark-mode  .timeline-block:last-child::after {
+    background-color: #f6f6f6;
+}
+
+@media screen and (min-width: 640px) {
+    .timeline-list {
+        max-width: 500px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}

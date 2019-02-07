@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './App.css';
+import './css/App.css';
 import { Sidebar } from './component/sidebar.component';
 import {Router} from './router'
 class App extends Component {
