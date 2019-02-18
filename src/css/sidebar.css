@@ -74,6 +74,7 @@
     border-radius: 50%;
     height: 50px;
     transition: all 1s ease;
+    cursor: pointer;
 }
 
 .sidebar ul li.toggle-darkmode img.dark { 

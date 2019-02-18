@@ -11,7 +11,9 @@ class App extends Component {
         this.state = {
             'isDark': false,
             'issideOpen': false,
+            'mainClass': ''
         }
+
     }
 
     darkMode = (value) => {
@@ -22,12 +24,16 @@ class App extends Component {
         this.setState({ 'issideOpen': value });
     }
 
+    toggleClass = (value) => {
+        this.setState({ 'mainClass': value });
+    }
+
 
     render() {
         return (
-            <main className={`app ${this.state.isDark ? `dark-mode` : ``} `}>
+            <main className={`app ${this.state.isDark ? `dark-mode` : ``} ${this.state.mainClass} `}>
                 <Sidebar toggleDark={this.darkMode} toggleSide={this.sideMode} />
-                <Router/>
+                <Router addClasstomain={this.toggleClass} />
             </main>
         );
     }

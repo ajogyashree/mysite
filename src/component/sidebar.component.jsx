@@ -9,6 +9,11 @@ export class Sidebar extends Component {
             'darkMode': false
         }
 
+        if (sessionStorage.getItem('darkMode') === 'true') {
+            this.state.darkMode = true;
+            this.props.toggleDark(true);
+        }
+
         this.toggleSidebar = this.toggleSidebar.bind(this);
         this.toggleDarkmode = this.toggleDarkmode.bind(this);
 
@@ -26,9 +31,11 @@ export class Sidebar extends Component {
     
     toggleDarkmode = () => {
         if (this.state.darkMode) {
+            sessionStorage.setItem('darkMode', false);
             this.setState({ 'darkMode': false });
             this.props.toggleDark(false);
         } else {
+            sessionStorage.setItem('darkMode', true);
             this.setState({ 'darkMode': true });
             this.props.toggleDark(true);
         }
@@ -47,9 +54,9 @@ export class Sidebar extends Component {
                     <li>
                         <Link to='/timeline' onClick={this.toggleSidebar}>Timeline</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to='/photos' onClick={this.toggleSidebar}>Photos</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to='/about' onClick={this.toggleSidebar}>About</Link>
                     </li>

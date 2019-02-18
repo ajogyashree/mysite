@@ -30,6 +30,9 @@ p.year {
     text-decoration: underline;
 }
 
+.app.dark-mode p.desc a {
+    color: #008000;
+}
 p.desc a {
     text-decoration: none;
 }
@@ -55,7 +58,7 @@ p.desc a {
     left: -10px;
     border-radius: 50%;
 }
-.app.dark-mode  .timeline-block::before {
+.app.dark-mode .timeline-block::before {
     background-color: #f6f6f6;
 }
 
@@ -67,6 +70,11 @@ p.desc a {
     .timeline-list {
         max-width: 500px;
         margin: 0 auto;
+        display: inline-block;
+        height: auto;
         overflow: hidden;
+    }
+    .app.timeline {
+        display: table;
     }
 }

@@ -24,17 +24,27 @@ export const Routes = [
 		path:'/story',
 		component: Story
 	},	
-	{
-		path:'/timeline',
-        component: Timeline
-	}	
 ]
-export const Router = () =>(
-    <Switch>
-        {
-            Routes.map(({ path, component: C, ...rest }, index) =>  (
-                <Route key={ 'mpscln-' + path + '-' +index } path={path} exact={true} render={(props) => ( <C {...props} {...rest} /> )} />
-			))
-        }
+export const Router = (props) => {
+    return (
+        <Switch>
+            <Route path='/timeline' render={() => <Timeline addClasstomain={props.addClasstomain}/>}/>
+            {
+                Routes.map(
+                    ( { path, component: C, ...rest }, index) => (
+                        <Route
+                            key={'mpscln-' + path + '-' + index}
+                            path={path}
+                            exact={true}
+                            render={
+                                (props) => (
+                                    <C {...props}  {...rest} />
+                                )
+                            }
+                        />
+                    )
+                )
+            }
     </Switch>
-)
+    )
+}
