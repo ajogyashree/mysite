@@ -1,0 +1,12 @@
+.app.about {
+    height: auto;
+}
+
+.app.about .body {
+    height: auto;
+}
+
+p .logo-block img {
+    height: 50px;
+    width: 50px;
+}

@@ -12,10 +12,10 @@ export const Routes = [
 		path:'/',
 		component: Home
 	},
-	{
+	/* {
 		path:'/about',
 		component: About
-	},
+	}, */
 	{
 		path:'/photos',
 		component: Photos
@@ -29,6 +29,7 @@ export const Router = (props) => {
     return (
         <Switch>
             <Route path='/timeline' render={() => <Timeline addClasstomain={props.addClasstomain}/>}/>
+            <Route path='/about' render={() => <About addClasstomain={props.addClasstomain}/>}/>
             {
                 Routes.map(
                     ( { path, component: C, ...rest }, index) => (

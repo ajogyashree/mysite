@@ -75,6 +75,9 @@ p.desc a {
         overflow: hidden;
     }
     .app.timeline {
-        display: table;
+        height: auto;
+    }
+    .app.timeline .body.timeline {
+        height: auto;
     }
 }

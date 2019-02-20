@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import '../css/timeline.css';
 export class Timeline extends Component {
     
-    componentWillMount() {
+    componentDidMount() {
         this.props.addClasstomain('timeline');
+        
     }
-
+    
     componentWillUnmount() {
         this.props.addClasstomain('');
     }
