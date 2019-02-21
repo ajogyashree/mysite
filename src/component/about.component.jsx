@@ -16,15 +16,14 @@ export class About extends Component {
         return (
 
             <div className="body">
-                <div className="content">
-                    <h1>About</h1>
+                <div className="content about-section">
                     <h3>Skillset</h3>
-                    <div>
+                    <div className="skillset">
                         <ul>
                             <li>
                                 <p>
                                     <span className="logo-block"><img src="../../assets/html5.png" alt="HTML5" /></span>
-                                    <span className="progress-bar"></span>
+                                    <span className="progress-bar"><span className="progress w-90"></span></span>
                                 </p>
                             </li>
                             <li>
@@ -34,7 +33,7 @@ export class About extends Component {
                                         <img src="../../assets/less.png" alt="LESS" />
                                         <img src="../../assets/sass.png" alt="SASS" />
                                     </span>
-                                    <span className="progress-bar"></span>
+                                    <span className="progress-bar"><span className="progress w-70"></span></span>
                                 </p>
                             </li>
                             <li>
@@ -43,7 +42,7 @@ export class About extends Component {
                                         <img src="../../assets/bootstrap.jpg" alt="Bootstrap" />
                                         <img src="../../assets/material.png" alt="Material" />
                                     </span>
-                                    <span className="progress-bar"></span>
+                                    <span className="progress-bar"><span className="progress w-80"></span></span>
                                 </p>
                             </li>
                             <li>
@@ -52,7 +51,7 @@ export class About extends Component {
                                         <img src="../../assets/js.png" alt="Javascript" />
                                         <img src="../../assets/jquery.png" alt="jQuery" />
                                     </span>
-                                    <span className="progress-bar"></span>
+                                    <span className="progress-bar"><span className="progress w-60"></span></span>
                                 </p>
                             </li>
                             <li>
@@ -61,7 +60,7 @@ export class About extends Component {
                                         <img src="../../assets/angular.png" alt="Angular" />
                                         <img src="../../assets/react.png" alt="React" />
                                     </span>
-                                    <span className="progress-bar"></span>
+                                    <span className="progress-bar"><span className="progress w-50"></span></span>
                                 </p>
                             </li>
                             <li>
@@ -71,7 +70,7 @@ export class About extends Component {
                                         <img src="../../assets/laravel.png" alt="Laravel" />
                                         <img src="../../assets/cakephp.jpg" alt="CakePHP" />
                                     </span>
-                                    <span className="progress-bar"></span>
+                                    <span className="progress-bar"><span className="progress w-70"></span></span>
                                 </p>
                             </li>
                             <li>
@@ -79,13 +78,13 @@ export class About extends Component {
                                     <span className="logo-block">
                                         <img src="../../assets/nodejs.png" alt="Nodejs" />
                                     </span>
-                                    <span className="progress-bar"></span>
+                                    <span className="progress-bar learn-mode"><span className="progress learn">Learning</span></span>
                                 </p>
                             </li>
                         </ul>
                     </div>
                     <h3>Hobbies</h3>
-                    <div>
+                    <div className="other-details hobbies">
                         <ol>
                             <li>Reading Manga</li>
                             <li>Reading Web novels</li>
@@ -96,23 +95,39 @@ export class About extends Component {
                         </ol>
                     </div>
                     <h3>Tools</h3>
-                    <div>
+                    <div className="other-details tools">
                         <ol>
-                            <li>Windows (HP) </li>
+                            <li>Windows ( WSL with Ubuntu ) </li>
                             <li>Visual Studio Code </li>
+                            <li>tmux</li>
                             <li>Zeplin</li>
                             <li>Redmi 4 + Mi Band 3</li>
                             <li>TVS Apache RTR 200 4v</li>
                         </ol>
                     </div>
                     <h3>Links</h3>
-                    <div>
+                    <div className="other-details links">
                         <ol>
-                            <li><a href="https://www.google.com">Github</a></li>
-                            <li><a href="https://www.google.com">Twitter</a></li>
-                            <li><a href="https://www.google.com">Stackoverflow</a></li>
-                            <li><a href="https://www.google.com">LinkedIn</a></li>
-                            <li><a href="https://www.google.com" title="In case anyone cares. Does need login though.">Facebook</a></li>
+                            <li>
+                                <a href="https://github.com/ajogyashree" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../assets/github.png" alt="Github" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/ajogya_shree" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../assets/twitter.png" alt="Twitter" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://stackoverflow.com/users/3007408/sp0t" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../assets/stack-overflow.png" alt="Stackoverflow" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/j-sreepati-rao/" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../assets/linked-in.svg" alt="LinkedIn" />
+                                </a>
+                            </li>
                         </ol>
                     </div>
                 </div>
