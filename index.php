@@ -3,7 +3,7 @@
 header_remove("x-powered-by");
 
 header("Content-Type: text/html; charset=UTF-8");
-header("Content-Security-Policy: default-src 'self'; script-src 'self' cdnjs.cloudflare.com code.jquery.com stackpath.bootstrapcdn.com; img-src 'self'; style-src 'self' 'unsafe-inline' cdnjs.cloudflare.com stackpath.bootstrapcdn.com use.fontawesome.com; font-src 'self' use.fontawesome.com; form-action 'self'");
+header("Content-Security-Policy: default-src 'self'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; form-action 'self'");
 header("Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'");
 header("Referrer-Policy: strict-origin-when-cross-origin");
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
@@ -16,224 +16,106 @@ require_once('db/keys.php');
 ?>
 <!doctype html>
 <html lang="en">
+
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="Resume of J Sreepati Rao">
-        <meta name="author" content="J Sreepati Rao">
-        <meta http-equiv="Cache-control" content="public" />
-        <meta http-equiv="x-dns-prefetch-control" content="on">
-        <meta name="msapplication-TileColor" content="#da532c">
+        <link rel="shortcut icon" href="/assets/favicon.ico">
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <meta name="theme-color" content="#333333">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-        <link rel="manifest" href="assets/site.webmanifest">
-        <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="alternate" href="http://www.ajogyashree.in/" hreflang="en-IN" />
+        <link rel="manifest" href="/manifest.json">
         <title>J Sreepati Rao</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/style.css">
+        <link href="/static/css/main.4aeb1795.chunk.css" rel="stylesheet">
     </head>
-    <body>
-        <main role="main">
-            <section class="left">
-                <div class="photo">
-                    <img class="img-fluid me" src="assets/me.jpg" alt="J Sreepati Rao">
-                </div>
-                <div class="location">
-                    <p class="pin"><a href="https://plus.codes/7J4VWPX3+2G" title="Somewhere Nearby"><i class="fas fa-map-marker-alt"></i></a></p>
-                    <p class="title">Address</p>
-                    <address class="detail">Munnekolala, Marathahalli, Bengaluru 560037</address>
-                </div>
-                <div class="about">
-                    <p class="pin"><i class="fas fa-user"></i></p>
-                    <p class="title">About Me</p>
-                    <p class="detail">A result oriented professional with 5 years of experience in Full Stack Web Development</p>
-                </div>
-                <div class="skill-set">
-                    <p class="pin"><i class="fas fa-laptop-code"></i></p>
-                    <p class="title">Skills</p>
-                    <ul>
-                        <li>
-                            <p class="progress-bar"><span style="width: 90%"></span></p>
-                            <p class="title">HTML5</p>
-                        </li>
-                        <li>
-                            <p class="progress-bar"><span style="width: 71%"></span></p>
-                            <p class="title">CSS3 / LESS / SCSS</p>
-                        </li>
-                        <li>
-                            <p class="progress-bar"><span style="width: 80%"></span></p>
-                            <p class="title">Bootstrap framework / Material design system</p>
-                        </li>
-                        <li>
-                            <p class="progress-bar"><span style="width: 70%"></span></p>
-                            <p class="title">JavaScript / jQuery</p>
-                        </li>
-                        <li>
-                            <p class="progress-bar"><span style="width: 50%"></span></p>
-                            <p class="title">Angularjs / React</p>
-                        </li>
-                        <li>
-                            <p class="progress-bar"><span style="width: 60%"></span></p>
-                            <p class="title">PHP Core / Frameworks</p>
-                        </li>
-                        <li class="social">
-                            <a target="_blank" href="https://www.facebook.com/J.Sreepati.Rao" title="Need Login!! Meh!!!"><i class="fab fa-facebook-square"></i></a>
-                            <a target="_blank" href="https://github.com/ajogyashree"><i class="fab fa-github"></i></a>
-                            <a target="_blank" href="https://stackoverflow.com/users/3007408/sp0t?tab=profile"><i class="fab fa-stack-overflow"></i></a>
-                            <a target="_blank" href="https://twitter.com/ajogya_shree"><i class="fab fa-twitter-square"></i></a>
-                            <a target="_blank" href="https://www.amazon.in/hz/wishlist/ls/GPCUUSXK0EGX" title="We have a derth of Good people"><i class="fab fa-amazon"></i></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/j-sreepati-rao" title="We have a derth of Good people"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <section class="right">
-                <div class="name">
-                    <div class="position">Full Stack Developer</div>
-                    <h1 class="me">J Sreepati Rao</h1>
-                    <div class="contact">
-                        <p class="phone" title="78273">+91 xxxxx-85576</p>
-                        <p class="email">jsr@this-site-replace-here.me</p>
-                        <p class="site"><a href="https://www.ajogyashree.me">www.ajogyashree.me</a></p>
-                    </div>
-                </div>
-                <div class="work-details">
-                    <p class="pin"><i class="fas fa-cog"></i></p>
-                    <div class="title">Work</div>
-                    <div class="card">
-                        <div class="left">
-                            <p class="year">
-                                Present
-                                <br>
-                                July 2016
-                            </p>
-                        </div>
-                        <div class="right">
-                            <ul>
-                                <li>
-                                    <a target="_blank" href="https://www.jigsawacademy.com">Jigsaw Academy Education Pvt. Ltd.</a>
-                                </li>
-                                <li>
-                                    <ul class="points">
-                                        <li>
-                                            <a target="_blank" href="https://www.jigsawacademy.com/jaws">Centralized admin panel</a> built on angularjs catering to live lead tracking, student’s course progress, creation of customizable course packages and reports. Search powered by React
-                                        </li>
-                                        <li>
-                                            <a target="_blank" href="https://www.jigsawacademy.com">Main site</a> built using SCSS and <a target="_blank" href="https://www.jigsawacademy.net">Student Learning Center</a> designed using LESS preprocessor.
-                                        </li>
-                                        <li>
-                                            Multiple Campaign/ Landing pages ( SPA ) designing and integration for lead generation.
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="left">
-                            <p class="year">
-                                June 2016
-                                <br>
-                                Oct. 2013
-                            </p>
-                        </div>
-                        <div class="right">
-                            <span class="verticle-bar"></span>
-                            <ul>
-                                <li>
-                                    <a target="_blank" href="https://www.synapseindia.com/">Synapse India</a>
-                                </li>
-                                <li>
-                                    <ul class="points">
-                                        <li>
-                                            Worked as lead developer for  <a target="_blank" href="https://www.foodcloud.in">Foodcloud.in</a>
-                                        </li>
-                                        <li>
-                                            Multivendor food based ecommerce platform catering to users across Delhi NCR
-                                        </li>
-                                        <li>
-                                            Multiple <a target="_blank" href="https://www.synapseindia.com/portfolio/" title="Mostly on CakePHP,Opencart and Ecommerce"> other</a> projects based of different platforms
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="education-details">
-                    <p class="pin"><i class="fas fa-graduation-cap"></i></p>
-                    <div class="title">Education</div>
-                    <div class="card">
-                        <div class="left">
-                            <p class="year">
-                                Always
-                                <br>
-                                Learning Something
-                            </p>
-                        </div>
-                        <div class="right">
-                            <ul>
-                                <li>
-                                    <ul class="points">
-                                        <li>
-                                            B.Tech ( Computer Science ) under Biju Patnaik University of Technology, Rourkela in 2012, securing 7.1 CGPA
-                                        </li>
-                                        <li>
-                                            +2 under Council of Higher Secondary Education, Berhampur in 2008, securing 67%
-                                        </li>
-                                        <li>
-                                            10th under Central Board of Secondary Education, Bhubaneswar in 2006, securing 78%
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="hobbies">
-                    <p class="pin"><i class="fas fa-book"></i></p>
-                    <div class="title">Others</div>
-                    <div class="card">
-                        <div class="left">
-                            &emsp;
-                        </div>
-                        <div class="right">
-                            <ul>
-                                <li>
-                                    <ul class="points">
-                                        <li>
-                                            <a target="_blank" href="https://www.asklaila.com/" title="Certified by BKBirla">Certified</a> Search Engine Optimization professional
-                                        </li>
-                                        <li>
-                                            Awarded as “Best Employee of the Month” for the month of March 2016 and Oct. 2014 in Synapse India
-                                        </li>
-                                        <li>
-                                            Reading <a target="_blank" href="https://www.wuxiaworld.com/"> Web Novels</a>, <a target="_blank" href="https://www.viz.com/one-piece"> Manga</a> and a lot of other stuff
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <p>
-                <span class="copy">
-                    &copy; J Sreepati Rao 2018
-                </span>
-                <span class="design">
-                    Design from <a target="_blank" href="http://zokidesign.com/portfolio/free-resume-template/">http://zokidesign.com/portfolio/free-resume-template/</a>
-                </span>
-            </p>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    </body>
-</html>
+
+    <body><noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="jsr"></div>
+        <script>
+            ! function (l) {
+                function e(e) {
+                    for (var r, t, n = e[0], o = e[1], u = e[2], f = 0, i = []; f < n.length; f++) t = n[f], p[t] && i.push(
+                        p[t][0]), p[t] = 0;
+                    for (r in o) Object.prototype.hasOwnProperty.call(o, r) && (l[r] = o[r]);
+                    for (s && s(e); i.length;) i.shift()();
+                    return c.push.apply(c, u || []), a()
+                }
+
+                function a() {
+                    for (var e, r = 0; r < c.length; r++) {
+                        for (var t = c[r], n = !0, o = 1; o < t.length; o++) {
+                            var u = t[o];
+                            0 !== p[u] && (n = !1)
+                        }
+                        n && (c.splice(r--, 1), e = f(f.s = t[0]))
+                    }
+                    return e
+                }
+                var t = {},
+                    p = {
+                        2: 0
+                    },
+                    c = [];
+
+                function f(e) {
+                    if (t[e]) return t[e].exports;
+                    var r = t[e] = {
+                        i: e,
+                        l: !1,
+                        exports: {}
+                    };
+                    return l[e].call(r.exports, r, r.exports, f), r.l = !0, r.exports
+                }
+                f.m = l, f.c = t, f.d = function (e, r, t) {
+                    f.o(e, r) || Object.defineProperty(e, r, {
+                        enumerable: !0,
+                        get: t
+                    })
+                }, f.r = function (e) {
+                    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+                        value: "Module"
+                    }), Object.defineProperty(e, "__esModule", {
+                        value: !0
+                    })
+                }, f.t = function (r, e) {
+                    if (1 & e && (r = f(r)), 8 & e) return r;
+                    if (4 & e && "object" == typeof r && r && r.__esModule) return r;
+                    var t = Object.create(null);
+                    if (f.r(t), Object.defineProperty(t, "default", {
+                            enumerable: !0,
+                            value: r
+                        }), 2 & e && "string" != typeof r)
+                        for (var n in r) f.d(t, n, function (e) {
+                            return r[e]
+                        }.bind(null, n));
+                    return t
+                }, f.n = function (e) {
+                    var r = e && e.__esModule ? function () {
+                        return e.default
+                    } : function () {
+                        return e
+                    };
+                    return f.d(r, "a", r), r
+                }, f.o = function (e, r) {
+                    return Object.prototype.hasOwnProperty.call(e, r)
+                }, f.p = "/";
+                var r = window.webpackJsonp = window.webpackJsonp || [],
+                    n = r.push.bind(r);
+                r.push = e, r = r.slice();
+                for (var o = 0; o < r.length; o++) e(r[o]);
+                var s = n;
+                a()
+            }([])
+        </script>
+        <script src="/static/js/1.bb1298ab.chunk.js"></script>
+        <script src="/static/js/main.492e4bfb.chunk.js"></script>
+        <script src="/sw.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker
+                    .register('/sw.js')
+                    .then(function () {
+                        console.log("Service Worker Registered");
+                    });
+            }
+        </script>
+
+</body></html>
