@@ -3,7 +3,7 @@
 header_remove("x-powered-by");
 
 header("Content-Type: text/html; charset=UTF-8");
-header("Content-Security-Policy: default-src 'self'; script-src 'self'; img-src 'self'; style-src 'self'; font-src 'self'; form-action 'self'");
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; img-src 'self'; style-src 'self'; font-src 'self'; form-action 'self'");
 header("Feature-Policy: accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'");
 header("Referrer-Policy: strict-origin-when-cross-origin");
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
