@@ -22,7 +22,7 @@ export class About extends Component {
                         <ul>
                             <li>
                                 <p>
-                                    <span className="logo-block"><img src="../../assets/html5.png" title="" alt="HTML5" /></span>
+                                    <span className="logo-block"><img src="../../assets/html5.png" title="HTML5" alt="HTML5" /></span>
                                     <span className="progress-bar"><span className="progress w-90"></span></span>
                                 </p>
                             </li>
@@ -39,8 +39,8 @@ export class About extends Component {
                             <li>
                                 <p>
                                     <span className="logo-block">
-                                        <img src="../../assets/bootstrap.jpg" title="" alt="Bootstrap" />
-                                        <img src="../../assets/material.png" title="" alt="Material" />
+                                        <img src="../../assets/bootstrap.jpg" title="Bootstrap Framework" alt="Bootstrap" />
+                                        <img src="../../assets/material.png" title="Material Design System" alt="Material" />
                                     </span>
                                     <span className="progress-bar"><span className="progress w-80"></span></span>
                                 </p>
@@ -109,7 +109,7 @@ export class About extends Component {
                     <div className="other-details links">
                         <ol>
                             <li>
-                                <a href="https://twitter.com/me_jsr" target="_blank" rel="noopener noreferrer">
+                                <a href="https://github.com/sreepati" target="_blank" rel="noopener noreferrer">
                                     <img src="../../assets/github.png" title="Github" alt="Github" />
                                 </a>
                             </li>
