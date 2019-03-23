@@ -22,16 +22,16 @@ export class About extends Component {
                         <ul>
                             <li>
                                 <p>
-                                    <span className="logo-block"><img src="../../assets/html5.png" alt="HTML5" /></span>
+                                    <span className="logo-block"><img src="../../assets/html5.png" title="" alt="HTML5" /></span>
                                     <span className="progress-bar"><span className="progress w-90"></span></span>
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     <span className="logo-block">
-                                        <img src="../../assets/css3.jpg" alt="CSS3" />
-                                        <img src="../../assets/less.png" alt="LESS" />
-                                        <img src="../../assets/sass.png" alt="SASS" />
+                                        <img src="../../assets/css3.jpg" title="CSS3" alt="CSS3" />
+                                        <img src="../../assets/less.png" title="LESS" alt="LESS" />
+                                        <img src="../../assets/sass.png" title="SCSS" alt="SCSS" />
                                     </span>
                                     <span className="progress-bar"><span className="progress w-70"></span></span>
                                 </p>
@@ -39,8 +39,8 @@ export class About extends Component {
                             <li>
                                 <p>
                                     <span className="logo-block">
-                                        <img src="../../assets/bootstrap.jpg" alt="Bootstrap" />
-                                        <img src="../../assets/material.png" alt="Material" />
+                                        <img src="../../assets/bootstrap.jpg" title="" alt="Bootstrap" />
+                                        <img src="../../assets/material.png" title="" alt="Material" />
                                     </span>
                                     <span className="progress-bar"><span className="progress w-80"></span></span>
                                 </p>
@@ -48,8 +48,8 @@ export class About extends Component {
                             <li>
                                 <p>
                                     <span className="logo-block">
-                                        <img src="../../assets/js.png" alt="Javascript" />
-                                        <img src="../../assets/jquery.png" alt="jQuery" />
+                                        <img src="../../assets/js.png" title="Javascript" alt="Javascript" />
+                                        <img src="../../assets/jquery.png" title="jQuery" alt="jQuery" />
                                     </span>
                                     <span className="progress-bar"><span className="progress w-60"></span></span>
                                 </p>
@@ -57,8 +57,8 @@ export class About extends Component {
                             <li>
                                 <p>
                                     <span className="logo-block">
-                                        <img src="../../assets/angular.png" alt="Angular" />
-                                        <img src="../../assets/react.png" alt="React" />
+                                        <img src="../../assets/angular.png" title="Angular Framework" alt="Angular" />
+                                        <img src="../../assets/react.png" title="React" alt="React" />
                                     </span>
                                     <span className="progress-bar"><span className="progress w-50"></span></span>
                                 </p>
@@ -66,9 +66,9 @@ export class About extends Component {
                             <li>
                                 <p>
                                     <span className="logo-block">
-                                        <img src="../../assets/php.png" alt="PHP Core" />
-                                        <img src="../../assets/laravel.png" alt="Laravel" />
-                                        <img src="../../assets/cakephp.jpg" alt="CakePHP" />
+                                        <img src="../../assets/php.png" title="PHP Core" alt="PHP Core" />
+                                        <img src="../../assets/laravel.png" title="Laravel Framework" alt="Laravel" />
+                                        <img src="../../assets/cakephp.jpg" title="CakePHP Framework" alt="CakePHP" />
                                     </span>
                                     <span className="progress-bar"><span className="progress w-70"></span></span>
                                 </p>
@@ -76,7 +76,7 @@ export class About extends Component {
                             <li>
                                 <p>
                                     <span className="logo-block">
-                                        <img src="../../assets/nodejs.png" alt="Nodejs" />
+                                        <img src="../../assets/nodejs.png" title="Nodejs" alt="Nodejs" />
                                     </span>
                                     <span className="progress-bar learn-mode"><span className="progress learn">Learning</span></span>
                                 </p>
@@ -109,23 +109,23 @@ export class About extends Component {
                     <div className="other-details links">
                         <ol>
                             <li>
-                                <a href="https://github.com/ajogyashree" target="_blank" rel="noopener noreferrer">
-                                    <img src="../../assets/github.png" alt="Github" />
+                                <a href="https://twitter.com/me_jsr" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../assets/github.png" title="Github" alt="Github" />
                                 </a>
                             </li>
                             <li>
-                                <a href="https://twitter.com/ajogya_shree" target="_blank" rel="noopener noreferrer">
-                                    <img src="../../assets/twitter.png" alt="Twitter" />
+                                <a href="https://twitter.com/me_jsr" target="_blank" rel="noopener noreferrer">
+                                    <img src="../../assets/twitter.png" title="Twitter" alt="Twitter" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://stackoverflow.com/users/3007408/sp0t" target="_blank" rel="noopener noreferrer">
-                                    <img src="../../assets/stack-overflow.png" alt="Stackoverflow" />
+                                    <img src="../../assets/stack-overflow.png" title="Stackoverflow" alt="Stackoverflow" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/in/j-sreepati-rao/" target="_blank" rel="noopener noreferrer">
-                                    <img src="../../assets/linked-in.svg" alt="LinkedIn" />
+                                    <img src="../../assets/linked-in.svg" title="LinkedIn" alt="LinkedIn" />
                                 </a>
                             </li>
                         </ol>

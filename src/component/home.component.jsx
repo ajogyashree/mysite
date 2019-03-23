@@ -8,9 +8,9 @@ export const Home = () => (
             <Spring
                 from={{ opacity: 0 }}
                 to={{ opacity: 1 }}>
-                {props => <div className="hello" style={props}>@ajogyashree</div>}
+                {props => <div className="hello" style={props}>@m-e.dev</div>}
             </Spring>
-            <h3>jsr@this-site.me</h3>
+            <h3>jsr@whats written above</h3>
             <p>Full Stack Web Developer / Freelancer</p>
         </div>
     </div>

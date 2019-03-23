@@ -48,9 +48,9 @@ export class Sidebar extends Component {
                     <li>
                         <Link to='/' onClick={this.toggleSidebar}>Me</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to='/story' onClick={this.toggleSidebar}>Story</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to='/timeline' onClick={this.toggleSidebar}>Timeline</Link>
                     </li>
