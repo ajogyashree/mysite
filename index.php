@@ -16,6 +16,7 @@ require_once('db/keys.php');
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/assets/favicon.ico">
@@ -25,6 +26,7 @@ require_once('db/keys.php');
     <title>J Sreepati Rao</title>
     <link href="/static/css/main.b330b563.chunk.css" rel="stylesheet">
 </head>
+
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="jsr"></div>
@@ -104,7 +106,7 @@ require_once('db/keys.php');
         }([])
     </script>
     <script src="/static/js/1.fa989624.chunk.js"></script>
-    <script src="/static/js/main.c06faa76.chunk.js"></script>
+    <script src="/static/js/main.e4f4d654.chunk.js"></script>
     <script src="/sw.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
@@ -116,4 +118,5 @@ require_once('db/keys.php');
         }
     </script>
 </body>
-</html>
+
+</html> 
