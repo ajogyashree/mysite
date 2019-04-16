@@ -1,0 +1,19 @@
+@import './assets/reset.scss';
+
+main {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .main {
+        text-align: center;
+
+        img {
+            width: 50%;
+            border-radius: 50%;
+        }
+    }
+}
